@@ -832,6 +832,8 @@ class ViewPort extends ViewportBase {
                     return `<div title="${nameValue.value}">${str}</div>`
                 } else if ('<hr>' === nameValue) {
                     return nameValue
+                } else if (nameValue.html) {
+                    return nameValue.html
                 } else {
                     return `<div title="${nameValue}">${nameValue}</div>`
                 }
